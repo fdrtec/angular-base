@@ -1,14 +1,20 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
 import {ViewsModule} from '../views/views.module';
-
+import {HeaderComponent} from './components/header/header.component';
+import {MaterialDesignModule} from '../material-design/material-design.module';
 
 
 @NgModule({
-  declarations: [],
+  declarations: [HeaderComponent],
+  exports: [
+    HeaderComponent
+  ],
   imports: [
     CommonModule,
-    ViewsModule
+    ViewsModule,
+    MaterialDesignModule,
   ]
 })
-export class CoreModule { }
+export class CoreModule {
+}

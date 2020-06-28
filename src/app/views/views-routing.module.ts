@@ -4,7 +4,7 @@ import {HomeComponent} from './home/home.component';
 import {FrameworkInfoComponent} from './framework-info/framework-info.component';
 
 const routes: Routes = [
-  { path: 'home', component: HomeComponent},
+  { path: '', component: HomeComponent},
   { path: 'framework-info', component: FrameworkInfoComponent}
 ];
 
