@@ -6,3 +6,7 @@
   color: #fff;
   background: #7b1fa2;
 }
+
+* {
+  height: 5vh;
+}

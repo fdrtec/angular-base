@@ -3,12 +3,14 @@ import {CommonModule} from '@angular/common';
 import {ViewsModule} from '../views/views.module';
 import {HeaderComponent} from './components/header/header.component';
 import {MaterialDesignModule} from '../material-design/material-design.module';
+import { FooterComponent } from './components/footer/footer.component';
 
 
 @NgModule({
-  declarations: [HeaderComponent],
+  declarations: [HeaderComponent, FooterComponent],
   exports: [
-    HeaderComponent
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     CommonModule,
