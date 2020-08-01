@@ -2,22 +2,18 @@ import {ChangeDetectorRef, Component, OnDestroy, OnInit} from '@angular/core';
 import {MediaMatcher} from '@angular/cdk/layout';
 
 @Component({
-  selector: 'app-header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css']
+  selector: 'app-view-base',
+  templateUrl: './view-base.component.html',
+  styleUrls: ['./view-base.component.css']
 })
-export class HeaderComponent implements OnInit, OnDestroy {
+export class ViewBaseComponent implements OnInit, OnDestroy {
 
   mobileQuery: MediaQueryList;
 
-  // fillerNav = Array.from({length: 10}, (_, i) => `Nav Item ${i + 1}`);
   fillerNav = [
-    {name: 'home', route:'', icon:'home'},
-    {name: 'framework', route:'framework-info', icon:'extension'},
-  ]
-
-  fillerContent = Array.from({length: 10}, () =>
-    `Mock test: Example of context.`);
+    {name: 'home', route: '', icon: 'home'},
+    {name: 'framework', route: 'framework-info', icon: 'extension'},
+  ];
 
   private _mobileQueryListener: () => void;
 
@@ -31,11 +27,12 @@ export class HeaderComponent implements OnInit, OnDestroy {
   }
 
 
+
+
+
   ngOnDestroy(): void {
     this.mobileQuery.removeListener(this._mobileQueryListener);
   }
 
   shouldRun = true;
-
-
 }

@@ -5,9 +5,10 @@ import {ViewsRoutingModule} from './views-routing.module';
 import {HomeComponent} from './home/home.component';
 import {FrameworkInfoComponent} from './framework-info/framework-info.component';
 import {MaterialDesignModule} from '../material-design/material-design.module';
+import { ExamplesComponent } from './examples/examples.component';
 
 @NgModule({
-  declarations: [HomeComponent, FrameworkInfoComponent],
+  declarations: [HomeComponent, FrameworkInfoComponent, ExamplesComponent],
   imports: [
     CommonModule,
     ViewsRoutingModule,
