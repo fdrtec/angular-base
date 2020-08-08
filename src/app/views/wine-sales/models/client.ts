@@ -1,4 +1,4 @@
-import {BaseResourceModel} from '../../shared/models/base-resource.model';
+import {BaseResourceModel} from '../../../shared/models/base-resource.model';
 
 export class Client extends BaseResourceModel {
   constructor(

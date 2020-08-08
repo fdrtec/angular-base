@@ -1,4 +1,4 @@
-import {BaseResourceModel} from '../../shared/models/base-resource.model';
+import {BaseResourceModel} from '../../../shared/models/base-resource.model';
 import {Item} from './item.model';
 
 export class Sale extends BaseResourceModel {

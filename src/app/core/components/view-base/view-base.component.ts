@@ -12,6 +12,7 @@ export class ViewBaseComponent implements OnInit, OnDestroy {
 
   fillerNav = [
     {name: 'home', route: '', icon: 'home'},
+    {name: 'Informações', route: 'wine-sales-info', icon: 'poll'},
     {name: 'framework', route: 'framework-info', icon: 'extension'},
   ];
 
