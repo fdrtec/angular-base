@@ -27,10 +27,6 @@ export class ViewBaseComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
   }
 
-
-
-
-
   ngOnDestroy(): void {
     this.mobileQuery.removeListener(this._mobileQueryListener);
   }

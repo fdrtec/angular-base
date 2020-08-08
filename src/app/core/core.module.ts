@@ -1,4 +1,4 @@
-import {NgModule} from '@angular/core';
+import {CUSTOM_ELEMENTS_SCHEMA, NgModule} from '@angular/core';
 import {ViewsModule} from '../views/views.module';
 import {MaterialDesignModule} from '../material-design/material-design.module';
 import {RouterModule} from '@angular/router';
@@ -26,7 +26,6 @@ import {InMemoryDatabase} from '../in-memory-database';
   ],
   exports: [
     ViewBaseComponent,
-    MaterialDesignModule,
     FlexLayoutModule,
     BrowserModule,
     BrowserAnimationsModule,
