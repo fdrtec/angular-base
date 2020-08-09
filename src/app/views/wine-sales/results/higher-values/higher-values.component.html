@@ -1,1 +1,19 @@
-<p>higher-values works!</p>
+<section>
+  <mat-accordion *ngFor="let sale of this.wineSalesService.getHigherValues()">
+    <mat-expansion-panel hideToggle>
+      <p>This is the primary content of the panel.</p>
+    </mat-expansion-panel>
+    <mat-expansion-panel (opened)="panelOpenState = true"
+                         (closed)="panelOpenState = false">
+      <mat-expansion-panel-header>
+<!--        <mat-panel-title>{{this.wineSalesService.getClientByCPF(sale.cliente)}}</mat-panel-title>-->
+        <mat-panel-title>{{sale.cliente}}</mat-panel-title>
+        <mat-panel-description>{{sale.data}}</mat-panel-description>
+        <mat-panel-description>{{sale.valorTotal}}</mat-panel-description>
+      </mat-expansion-panel-header>
+      <div *ngFor="let item of sale.itens">
+        <p>{{item.produto}}:{{item.preco}}</p>
+      </div>
+    </mat-expansion-panel>
+  </mat-accordion>
+</section>

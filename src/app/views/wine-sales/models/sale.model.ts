@@ -14,6 +14,6 @@ export class Sale extends BaseResourceModel {
   }
 
   static fromJson(jsonData:any){
-    Object.assign(new Sale, jsonData);
+    return Object.assign(new Sale, jsonData);
   }
 }

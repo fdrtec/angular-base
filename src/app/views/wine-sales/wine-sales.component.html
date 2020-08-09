@@ -8,9 +8,12 @@
     <nav mat-tab-nav-bar [backgroundColor]="background">
       <a mat-tab-link *ngFor="let link of links"
          (click)="activeLink = link.route"
+         [routerLink]="link.route"
          [active]="activeLink == link.route"> {{link.title}} </a>
     </nav>
-    <router-outlet></router-outlet>
-
   </mat-card-content>
 </mat-card>
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
+
