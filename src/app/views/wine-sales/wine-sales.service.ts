@@ -17,7 +17,6 @@ export class WineSalesService {
   ) {
   }
 
-
   getClients(): Observable<Client[]> {
     return this.clientResourceService.getAll();
   }
@@ -26,10 +25,14 @@ export class WineSalesService {
     return this.saleResourceService.getAll();
   }
 
+  validateCpf(cpf :string) : string{
+    return cpf.length > 14 ? cpf.substr(1): cpf
+  }
+
   joinDocuments(sales: Sale[], clients: Client[]): Sale[] {
     return sales.sort(this.sortByhighestValue)
       .map(sale => {
-        let client = clients.find(item => item.cpf.replace('-', '.') == sale.cliente);
+        let client = clients.find(item => item.cpf.replace('-', '.') == this.validateCpf(sale.cliente));
         return {...sale, ['dadosCliente']: client};
       });
   }
