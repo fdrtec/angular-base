@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {WineSalesService} from '../../wine-sales.service';
-import {Client} from '../../models/client';
+import {Sale} from '../../models/sale.model';
 
 @Component({
   selector: 'app-higher-values',
@@ -9,7 +9,7 @@ import {Client} from '../../models/client';
 })
 export class HigherValuesComponent implements OnInit {
   panelOpenState: boolean;
-  higherValues: any[];
+  higherValues: Sale[];
 
 
   constructor(
@@ -18,5 +18,10 @@ export class HigherValuesComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.wineSalesService.getHigherValues()
+      .subscribe((data) => {
+        console.table(data);
+        this.higherValues = data;
+      });
   }
 }

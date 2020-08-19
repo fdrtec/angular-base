@@ -38,12 +38,24 @@ export class WineSalesComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.wineSalesService.getSales()
-      .pipe(
-        flatMap((sales) => this.sales = sales))
-      .subscribe(() => this.wineSalesService.getClients()
-         .pipe(map((clients) => this.clients = clients))
-     .subscribe(() => this.wineSalesService.prepareArtfacts(this.clients, this.sales)))
+    this.wineSalesService.getHigherValues();
+
+    // this.wineSalesService.getSales()
+    //   .pipe(
+    //     flatMap((sales) => this.sales = sales))
+    //   .subscribe(() => this.wineSalesService.getClients()
+    //      .pipe(map((clients) => this.clients = clients))
+    //  .subscribe(() => this.wineSalesService.prepareArtfacts(this.clients, this.sales)))
+
+    // this.wineSalesService.getSales()
+    //   .subscribe((sales) => this.sales = sales);
+
+    // this.wineSalesService.getClients()
+    //     .pipe(map((clients) => this.clients = clients))
+    //     .subscribe(() => this.wineSalesService.prepareArtfacts(this.clients, this.sales))
+    //
+    // this.wineSalesService.getSales()
+    //   .subscribe((sales) => this.sales = sales);
 
     // this.wineSalesService.getClients()
     //   .pipe(map((clients) => this.wineSalesService.getSales()
