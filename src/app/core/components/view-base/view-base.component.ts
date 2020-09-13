@@ -11,8 +11,9 @@ export class ViewBaseComponent implements OnInit, OnDestroy {
   mobileQuery: MediaQueryList;
 
   fillerNav = [
-    {name: 'home', route: '', icon: 'home'},
+    {name: 'Home', route: '', icon: 'home'},
     {name: 'Informações', route: 'wine-sales-info', icon: 'poll'},
+    {name: 'Exemplos', route: 'examples', icon: 'category'},
     {name: 'framework', route: 'framework-info', icon: 'extension'},
   ];
 
