@@ -1,0 +1,19 @@
+<mat-card class="example-card">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>Dados de Clientes e Histórico de compras</mat-card-title>
+    <mat-card-subtitle>Tabelas</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <nav mat-tab-nav-bar [backgroundColor]="background">
+      <a mat-tab-link *ngFor="let link of links"
+         (click)="activeLink = link.route"
+         [routerLink]="link.route"
+         [active]="activeLink == link.route"> {{link.title}} </a>
+    </nav>
+  </mat-card-content>
+</mat-card>
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
+

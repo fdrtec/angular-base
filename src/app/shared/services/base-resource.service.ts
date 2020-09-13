@@ -7,45 +7,48 @@ import {Injector} from '@angular/core';
 export abstract class BaseResourceService<T extends BaseResourceModel> {
   protected http: HttpClient;
 
-  constructor(protected apiPath: string, protected injector: Injector) {
+  constructor(
+    protected apiPath: string,
+    protected injector: Injector,
+    protected jsonDataToResourceFn: (jsonData: any) => T) {
     this.http = injector.get(HttpClient);
   }
 
   getAll(): Observable<T[]> {
     return this.http.get(this.apiPath).pipe(
+      map(this.jsonDataToResources.bind(this)),
       catchError(this.handleError),
-      map(this.jsonDataToResources)
     );
   }
 
-  getById(_id: string): Observable<T> {
-    const url = `${this.apiPath}/${_id}`;
+  getById(id: string): Observable<T> {
+    const url = `${this.apiPath}/${id}`;
     return this.http.get(url).pipe(
-      catchError(this.handleError),
-      map(this.jsonDataToResource)
+      map(this.jsonDataToResource.bind(this)),
+      catchError(this.handleError)
     );
   }
 
   create(resource: T): Observable<T> {
     return this.http.post(this.apiPath, resource).pipe(
-      catchError(this.handleError),
-      map(this.jsonDataToResource)
+      map(this.jsonDataToResource.bind(this)),
+      catchError(this.handleError)
     );
   }
 
   update(resource: T): Observable<T> {
-    const url = `${this.apiPath}/${resource._id}`;
+    const url = `${this.apiPath}/${resource.id}`;
     return this.http.put(url, resource).pipe(
-      catchError(this.handleError),
-      map(() => resource)
+      map(() => resource),
+      catchError(this.handleError)
     );
   }
 
-  delete(_id: string): Observable<T> {
-    const url = `${this.apiPath}/${_id}`;
-    return this.http.delete(_id).pipe(
-      catchError(this.handleError),
-      map(() => null)
+  delete(id: string): Observable<T> {
+    const url = `${this.apiPath}/${id}`;
+    return this.http.delete(id).pipe(
+      map(() => null),
+      catchError(this.handleError)
     );
   }
 
@@ -53,12 +56,16 @@ export abstract class BaseResourceService<T extends BaseResourceModel> {
   // @ts-ignore
   protected jsonDataToResources(jsonData: any[]): T[] {
     const resources: T[] = [];
-    jsonData.forEach(element => resources.push(element as T));
+    jsonData.forEach(
+      element => {
+        resources.push(this.jsonDataToResourceFn(element))}
+    );
+    return resources;
   }
 
   // @ts-ignore
   protected jsonDataToResource(jsonData: any): T {
-    return jsonData as T;
+    return this.jsonDataToResourceFn(jsonData);
   }
 
   protected handleError(error: any): Observable<any> {

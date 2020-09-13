@@ -12,6 +12,7 @@ export class ViewBaseComponent implements OnInit, OnDestroy {
 
   fillerNav = [
     {name: 'home', route: '', icon: 'home'},
+    {name: 'Informações', route: 'wine-sales-info', icon: 'poll'},
     {name: 'framework', route: 'framework-info', icon: 'extension'},
   ];
 
@@ -25,10 +26,6 @@ export class ViewBaseComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
   }
-
-
-
-
 
   ngOnDestroy(): void {
     this.mobileQuery.removeListener(this._mobileQueryListener);
