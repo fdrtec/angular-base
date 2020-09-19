@@ -3,7 +3,6 @@ import {Item} from './item.model';
 
 export class Sale extends BaseResourceModel {
   constructor(
-    public id?: number,
     public codigo?: string,
     public data?: Date,
     public cliente?: string,

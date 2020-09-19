@@ -3,7 +3,6 @@ import {Sale} from './sale.model';
 
 export class Client extends BaseResourceModel {
   constructor(
-    public id?: number,
     public nome?: string,
     public cpf?: string,
     public sales?: Sale[]

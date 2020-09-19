@@ -1,12 +1,13 @@
 import {Injectable, Injector} from '@angular/core';
 import {BaseResourceService} from '../../../shared/services/base-resource.service';
-import {Sale} from '../models/sale.model';
+import {Patient} from '../models/patient';
 
 @Injectable({
   providedIn: 'root'
 })
-export class SaleResourceService extends BaseResourceService<Sale>{
+
+export class PatientResourceService extends BaseResourceService<Patient> {
   constructor(protected injector: Injector) {
-    super("https://www.mocky.io/v2/598b16861100004905515ec7", injector , Sale.fromJson);
+    super('', injector, Patient.fromJson);
   }
 }
