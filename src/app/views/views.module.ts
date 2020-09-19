@@ -6,8 +6,7 @@ import {FrameworkInfoComponent} from './framework-info/framework-info.component'
 import {ExamplesComponent} from './examples/examples.component';
 import {SharedModule} from '../shared/shared.module';
 import {WineSalesModule} from './wine-sales/wine-sales.module';
-import { FormExampleComponentComponent } from './examples/formExample/form-example-component/form-example-component.component';
-import { MedicalAppointmentsComponent } from './medical-appointments/medical-appointments.component';
+import {FormExampleComponentComponent} from './examples/formExample/form-example-component/form-example-component.component';
 import {MedicalAppointmentsModule} from './medical-appointments/medical-appointments.module';
 
 @NgModule({
@@ -16,13 +15,13 @@ import {MedicalAppointmentsModule} from './medical-appointments/medical-appointm
     FrameworkInfoComponent,
     ExamplesComponent,
     FormExampleComponentComponent,
-    // MedicalAppointmentsComponent,
   ],
   imports: [
     SharedModule,
     ViewsRoutingModule,
     WineSalesModule,
     MedicalAppointmentsModule
+
   ],
   exports: [
     SharedModule,
