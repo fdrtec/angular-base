@@ -12,9 +12,10 @@ export class ViewBaseComponent implements OnInit, OnDestroy {
 
   fillerNav = [
     {name: 'Home', route: '', icon: 'home'},
-    {name: 'Informações', route: 'wine-sales-info', icon: 'poll'},
-    {name: 'Exemplos', route: 'examples', icon: 'category'},
-    {name: 'framework', route: 'framework-info', icon: 'extension'},
+    {name: 'Agendamento de consultas', route: 'medical-appointments', icon: 'poll'},
+    // {name: 'Informações', route: 'wine-sales-info', icon: 'poll'},
+    // {name: 'Exemplos', route: 'examples', icon: 'category'},
+    {name: 'Framework', route: 'framework-info', icon: 'extension'},
   ];
 
   private _mobileQueryListener: () => void;

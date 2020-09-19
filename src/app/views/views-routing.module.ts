@@ -7,8 +7,9 @@ import {WineSalesComponent} from './wine-sales/wine-sales.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent},
-  { path: 'examples', component: ExamplesComponent},
-  { path: 'wine-sales-info', loadChildren: './wine-sales/wine-sales.module#WineSalesModule'},
+  // { path: 'examples', component: ExamplesComponent},
+  // { path: 'wine-sales-info', loadChildren: './wine-sales/wine-sales.module#WineSalesModule'},
+  { path: 'medical-appointments', loadChildren: './medical-appointments/medical-appointments.module#MedicalAppointmentsModule'},
   { path: 'framework-info', component: FrameworkInfoComponent}
 ];
 
