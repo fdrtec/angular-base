@@ -1,5 +1,5 @@
 <div [formGroup]="formGroup" class="form">
-<!--  <mat-form-field appearance="legacy">-->
+  <mat-form-field appearance="legacy">
     <mat-label>{{title}}</mat-label>
     <input matInput
            [placeholder]="placeholder"
@@ -14,5 +14,5 @@
     <mat-error *ngIf="fieldValidator.hasErrorValidate(formControl, 'maxlength')">
       {{sharedComponentValues.validator.maxlength}} {{fieldValidator.lengthValidate(formControl, 'maxlength')}}
     </mat-error>
-<!--  </mat-form-field>-->
+  </mat-form-field>
 </div>
