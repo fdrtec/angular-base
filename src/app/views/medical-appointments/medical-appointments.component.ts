@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {MedicalAppointmentsService} from './medical-appointments.service';
 
 @Component({
@@ -9,7 +9,6 @@ import {MedicalAppointmentsService} from './medical-appointments.service';
 export class MedicalAppointmentsComponent implements OnInit {
 
   constructor(private service: MedicalAppointmentsService) {
-
   }
 
   ngOnInit(): void {

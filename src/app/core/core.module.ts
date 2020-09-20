@@ -4,6 +4,7 @@ import {CoreRoutingModule} from './core-routing.module';
 import {MaterialDesignModule} from '../material-design/material-design.module';
 import {CommonModule} from '@angular/common';
 import {ViewsModule} from '../views/views.module';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -16,15 +17,14 @@ import {ViewsModule} from '../views/views.module';
     MaterialDesignModule,
     ViewsModule,
     // RouterModule,
-    // HttpClientModule
+    HttpClientModule
   ],
   //** schemas: [CUSTOM_ELEMENTS_SCHEMA],
 
   exports: [
     ViewBaseComponent,
     MaterialDesignModule,
-
-    //HttpClientModule,
+    HttpClientModule,
     //CoreRoutingModule
   ],
 })

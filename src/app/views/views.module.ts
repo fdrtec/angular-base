@@ -6,6 +6,7 @@ import {ViewsRoutingModule} from './views-routing.module';
 import {FrameworkInfoComponent} from './framework-info/framework-info.component';
 import {SharedModule} from '../shared/shared.module';
 import {CommonModule} from '@angular/common';
+import {MedicalAppointmentsModule} from './medical-appointments/medical-appointments.module';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,7 @@ import {CommonModule} from '@angular/common';
     //MaterialDesignModule,
     //CoreRoutingModule,
     //WineSalesModule,
-    //MedicalAppointmentsModule
+    MedicalAppointmentsModule
   ],
   exports: [
     SharedModule,

@@ -1,14 +1,17 @@
-<mat-card class="doctor-layout">
-  <form class [formGroup]="doctorForm" (ngSubmit)="onSubmit()">
-    <app-input-text title="Nome"
-                     controlName="name"
-                     [formGroup]="doctorForm"
-                     placeholder="Informe o nome">
-    </app-input-text>
-  </form>
-</mat-card>
+<div class="doctor-layout">
+  <mat-card class="context">
+    <form class [formGroup]="doctorForm" (ngSubmit)="onSubmit()">
+      <app-input-text title="Nome"
+                      controlName="name"
+                      [formGroup]="doctorForm"
+                      placeholder="Informe o nome">
+      </app-input-text>
+    </form>
+  </mat-card>
+</div>
 
 
+<!--bkp para testar form abstract-->
 <!--  <mat-card class="context">-->
 <!--    <form [formGroup]="resourceForm" (submit)="submitForm()">-->
 

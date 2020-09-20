@@ -19,7 +19,7 @@ import {MaterialDesignModule} from '../material-design/material-design.module';
   ],
   exports: [
     //CommonModule,
-    //MaterialDesignModule,
+    MaterialDesignModule,
     //ReactiveFormsModule,
     //HttpClientModule,
     InputTextComponent,
