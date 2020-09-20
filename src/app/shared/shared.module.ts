@@ -7,21 +7,14 @@ import {InputTextAreaComponent} from './components/fields/input-text-area/input-
 import {InputNumberComponent} from './components/fields/input-number/input-number.component';
 import {MaterialDesignModule} from '../material-design/material-design.module';
 
-
 @NgModule({
   declarations: [InputTextComponent, InputDateComponent, InputSelectComponent, InputTextAreaComponent, InputNumberComponent],
   imports: [
     CommonModule,
-    MaterialDesignModule,
-    //ReactiveFormsModule,
-    //HttpClientModule,
-
+    MaterialDesignModule
   ],
   exports: [
-    //CommonModule,
     MaterialDesignModule,
-    //ReactiveFormsModule,
-    //HttpClientModule,
     InputTextComponent,
     InputDateComponent,
     InputSelectComponent,
@@ -29,5 +22,6 @@ import {MaterialDesignModule} from '../material-design/material-design.module';
     InputNumberComponent,
   ]
 })
+
 export class SharedModule {
 }

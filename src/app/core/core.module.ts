@@ -19,13 +19,11 @@ import {HttpClientModule} from '@angular/common/http';
     // RouterModule,
     HttpClientModule
   ],
-  //** schemas: [CUSTOM_ELEMENTS_SCHEMA],
 
   exports: [
     ViewBaseComponent,
     MaterialDesignModule,
-    HttpClientModule,
-    //CoreRoutingModule
+    HttpClientModule
   ],
 })
 export class CoreModule {

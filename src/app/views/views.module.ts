@@ -19,16 +19,11 @@ import {MedicalAppointmentsModule} from './medical-appointments/medical-appointm
     CommonModule,
     ViewsRoutingModule,
     SharedModule,
-
-    //MaterialDesignModule,
-    //CoreRoutingModule,
     //WineSalesModule,
     MedicalAppointmentsModule
   ],
   exports: [
-    SharedModule,
-    //MaterialDesignModule
-    //ViewsRoutingModule,
+    SharedModule
   ]
 })
 export class ViewsModule {

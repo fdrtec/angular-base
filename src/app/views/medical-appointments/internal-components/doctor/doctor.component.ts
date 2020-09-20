@@ -30,9 +30,6 @@ export class DoctorComponent implements OnInit {
 }
 
 
-
-
-
 // export class DoctorComponent extends BaseResourceFormComponent<Doctor> {
 //
 //   constructor(protected medicalAppointmentsService: MedicalAppointmentsService, protected injector: Injector) {
