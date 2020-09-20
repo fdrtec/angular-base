@@ -1,24 +1,16 @@
 .doctor-layout {
   display: grid;
-  width: 100vw;
-  height: 90vh;
-  grid-template-columns: 3fr 6fr 3fr;
+  /*width: 100vw;*/
+  height: 40vh;
+  grid-template-columns: 2fr 8fr 2fr;
   grid-template-rows: 1fr 10fr 1fr;
   grid-template-areas:
     ". . ."
     ". context ."
     ". . ."
-
 }
-
-.space1 {
-  grid-area: space1;
-}
-
 .context {
   grid-area: context;
 }
 
-.space2 {
-  grid-area: space2;
-}
+
