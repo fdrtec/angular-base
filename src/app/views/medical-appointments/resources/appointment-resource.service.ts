@@ -8,6 +8,6 @@ import {Appointment} from '../models/appointment';
 
 export class AppointmentResourceService extends BaseResourceService<Appointment>{
   constructor(protected injector: Injector) {
-    super('', injector, Appointment.fromJson);
+    super('http://localhost:8080/appointment', injector, Appointment.fromJson);
   }
 }

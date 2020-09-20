@@ -8,6 +8,6 @@ import {Patient} from '../models/patient';
 
 export class PatientResourceService extends BaseResourceService<Patient> {
   constructor(protected injector: Injector) {
-    super('', injector, Patient.fromJson);
+    super('http://localhost:8080/patient', injector, Patient.fromJson);
   }
 }
