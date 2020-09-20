@@ -1,6 +1,10 @@
 import {NgModule} from '@angular/core';
 import {ViewBaseComponent} from './components/view-base/view-base.component';
 import {CoreRoutingModule} from './core-routing.module';
+import {MaterialDesignModule} from '../material-design/material-design.module';
+import {CommonModule} from '@angular/common';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {FlexLayoutModule} from '@angular/flex-layout';
 
 @NgModule({
   declarations: [
@@ -8,23 +12,21 @@ import {CoreRoutingModule} from './core-routing.module';
   ],
 
   imports: [
-    //BrowserModule,
+    CommonModule,
     CoreRoutingModule,
-    // MaterialDesignModule,
+    MaterialDesignModule,
+
     // RouterModule,
-    // FlexLayoutModule,
-    // BrowserAnimationsModule,
+
+
     // HttpClientModule
   ],
   //schemas: [CUSTOM_ELEMENTS_SCHEMA],
 
   exports: [
     ViewBaseComponent,
-    //MaterialDesignModule,
-    //ViewBaseComponent,
-    //FlexLayoutModule,
-    //BrowserModule,
-    //BrowserAnimationsModule,
+    MaterialDesignModule,
+
     //HttpClientModule,
     //CoreRoutingModule
   ],
