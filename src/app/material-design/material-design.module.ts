@@ -32,6 +32,7 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatButtonModule} from '@angular/material/button';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {FlexLayoutModule} from '@angular/flex-layout';
+import {ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [],
@@ -69,6 +70,7 @@ import {FlexLayoutModule} from '@angular/flex-layout';
     MatSortModule,
     MatPaginatorModule,
     FlexLayoutModule,
+    ReactiveFormsModule,
   ],
   exports: [
     MatCheckboxModule,
@@ -103,6 +105,7 @@ import {FlexLayoutModule} from '@angular/flex-layout';
     MatSortModule,
     MatPaginatorModule,
     FlexLayoutModule,
+    ReactiveFormsModule,
   ]
 })
 export class MaterialDesignModule { }

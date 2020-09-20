@@ -5,12 +5,6 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './framework-info.component.html',
   styleUrls: ['./framework-info.component.css']
 })
-export class FrameworkInfoComponent implements OnInit {
+export class FrameworkInfoComponent {
   title = 'angular-base';
-
-  constructor() {}
-
-  ngOnInit(): void {
-  }
-
 }

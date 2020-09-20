@@ -6,22 +6,21 @@ import {InputSelectComponent} from './components/fields/input-select/input-selec
 import {InputTextAreaComponent} from './components/fields/input-text-area/input-text-area.component';
 import {InputNumberComponent} from './components/fields/input-number/input-number.component';
 import {MaterialDesignModule} from '../material-design/material-design.module';
-import {ReactiveFormsModule} from '@angular/forms';
 
 
 @NgModule({
   declarations: [InputTextComponent, InputDateComponent, InputSelectComponent, InputTextAreaComponent, InputNumberComponent],
-    imports: [
-        CommonModule,
-        MaterialDesignModule,
-        ReactiveFormsModule,
-        //HttpClientModule,
-
-    ],
-  exports: [
+  imports: [
     CommonModule,
     MaterialDesignModule,
-    ReactiveFormsModule,
+    //ReactiveFormsModule,
+    //HttpClientModule,
+
+  ],
+  exports: [
+    //CommonModule,
+    //MaterialDesignModule,
+    //ReactiveFormsModule,
     //HttpClientModule,
     InputTextComponent,
     InputDateComponent,
@@ -30,4 +29,5 @@ import {ReactiveFormsModule} from '@angular/forms';
     InputNumberComponent,
   ]
 })
-export class SharedModule { }
+export class SharedModule {
+}

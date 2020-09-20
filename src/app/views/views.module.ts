@@ -3,25 +3,29 @@ import {HomeComponent} from './home/home.component';
 import {ExamplesComponent} from './examples/examples.component';
 import {FormExampleComponentComponent} from './examples/formExample/form-example-component/form-example-component.component';
 import {ViewsRoutingModule} from './views-routing.module';
+import {FrameworkInfoComponent} from './framework-info/framework-info.component';
+import {SharedModule} from '../shared/shared.module';
+import {CommonModule} from '@angular/common';
 
 @NgModule({
   declarations: [
     HomeComponent,
-    //FrameworkInfoComponent,
+    FrameworkInfoComponent,
     ExamplesComponent,
     FormExampleComponentComponent,
   ],
   imports: [
-    ViewsRoutingModule
-    //SharedModule,
-    //MaterialDesignModule,
+    CommonModule,
+    ViewsRoutingModule,
+    SharedModule,
 
+    //MaterialDesignModule,
     //CoreRoutingModule,
     //WineSalesModule,
     //MedicalAppointmentsModule
   ],
   exports: [
-    //SharedModule,
+    SharedModule,
     //MaterialDesignModule
     //ViewsRoutingModule,
   ]
