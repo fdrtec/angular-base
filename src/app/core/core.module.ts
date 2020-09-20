@@ -1,10 +1,9 @@
-import {NgModule} from '@angular/core';
+import {CUSTOM_ELEMENTS_SCHEMA, NgModule} from '@angular/core';
 import {ViewBaseComponent} from './components/view-base/view-base.component';
 import {CoreRoutingModule} from './core-routing.module';
 import {MaterialDesignModule} from '../material-design/material-design.module';
 import {CommonModule} from '@angular/common';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {FlexLayoutModule} from '@angular/flex-layout';
+import {ViewsModule} from '../views/views.module';
 
 @NgModule({
   declarations: [
@@ -15,13 +14,11 @@ import {FlexLayoutModule} from '@angular/flex-layout';
     CommonModule,
     CoreRoutingModule,
     MaterialDesignModule,
-
+    ViewsModule,
     // RouterModule,
-
-
     // HttpClientModule
   ],
-  //schemas: [CUSTOM_ELEMENTS_SCHEMA],
+  //** schemas: [CUSTOM_ELEMENTS_SCHEMA],
 
   exports: [
     ViewBaseComponent,
