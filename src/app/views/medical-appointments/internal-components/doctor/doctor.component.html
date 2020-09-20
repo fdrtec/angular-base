@@ -1,35 +1,45 @@
-<div class="doctor-layout">
-  <mat-card class="context">
-    <form [formGroup]="resourceForm" (submit)="submitForm()">
+<mat-card class="doctor-layout">
+  <form class [formGroup]="doctorForm" (ngSubmit)="onSubmit()">
+    <app-input-text title="Nome"
+                     controlName="name"
+                     [formGroup]="doctorForm"
+                     placeholder="Informe o nome">
+    </app-input-text>
+  </form>
+</mat-card>
 
-      <div class="card">
-        <div class="card-header">
-          Médico
-        </div>
 
-        <div class="card-body">
-          <div class="form-row">
-            <div class="form-group col-md-4">
-              <label for="name">Nome</label>
-              <input type="text" class="form-control" id="name" formControlName="name">
+<!--  <mat-card class="context">-->
+<!--    <form [formGroup]="resourceForm" (submit)="submitForm()">-->
 
-              <app-form-field-error [form-control]="resourceForm.get('name')"></app-form-field-error>
-            </div>
+<!--      <div class="card">-->
+<!--        <div class="card-header">-->
+<!--          Médico-->
+<!--        </div>-->
 
-            <!--        <div class="form-group col-md-8">-->
-            <!--          <label for="description">Descrição</label>-->
-            <!--          <input type="text" class="form-control" id="description" formControlName="description">-->
-            <!--        </div>-->
-          </div>
-        </div>
-      </div>
+<!--        <div class="card-body">-->
+<!--          <div class="form-row">-->
+<!--            <div class="form-group col-md-4">-->
+<!--              <label for="name">Nome</label>-->
+<!--              <input type="text" class="form-control" id="name" formControlName="name">-->
 
-      <app-server-error-messages [server-error-messages]="serverErrorMessages"></app-server-error-messages>
+<!--              <app-form-field-error [form-control]="resourceForm.get('name')"></app-form-field-error>-->
+<!--            </div>-->
 
-      <button [disabled]="submittingForm || resourceForm.invalid" type="submit"
-              class="btn btn-primary btn-lg float-right mt-3">
-        Salvar
-      </button>
-    </form>
-  </mat-card>
-</div>
+<!--            &lt;!&ndash;        <div class="form-group col-md-8">&ndash;&gt;-->
+<!--            &lt;!&ndash;          <label for="description">Descrição</label>&ndash;&gt;-->
+<!--            &lt;!&ndash;          <input type="text" class="form-control" id="description" formControlName="description">&ndash;&gt;-->
+<!--            &lt;!&ndash;        </div>&ndash;&gt;-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+
+<!--      <app-server-error-messages [server-error-messages]="serverErrorMessages"></app-server-error-messages>-->
+
+<!--      <button [disabled]="submittingForm || resourceForm.invalid" type="submit"-->
+<!--              class="btn btn-primary btn-lg float-right mt-3">-->
+<!--        Salvar-->
+<!--      </button>-->
+<!--    </form>-->
+<!--  </mat-card>-->
+

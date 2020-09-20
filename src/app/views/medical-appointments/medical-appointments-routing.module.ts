@@ -1,6 +1,6 @@
 import {RouterModule, Routes} from '@angular/router';
 import {MedicalAppointmentsComponent} from './medical-appointments.component';
-import {NgModule} from '@angular/core';
+import {CUSTOM_ELEMENTS_SCHEMA, NgModule} from '@angular/core';
 import {DoctorComponent} from './internal-components/doctor/doctor.component';
 import {PatientComponent} from './internal-components/patient/patient.component';
 

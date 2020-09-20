@@ -11,6 +11,7 @@ import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import {FlexLayoutModule} from '@angular/flex-layout';
+import {SharedModule} from '../../shared/shared.module';
 
 @NgModule({
   declarations: [MedicalAppointmentsComponent, DoctorComponent, PatientComponent],
@@ -18,13 +19,13 @@ import {FlexLayoutModule} from '@angular/flex-layout';
     CommonModule,
     MedicalAppointmentsRoutingModule,
     ReactiveFormsModule,
-    MatCardModule,
-    MatButtonModule,
-    MatIconModule,
-    FlexLayoutModule
-
+    // MatCardModule,
+    // MatButtonModule,
+    // MatIconModule,
+    // FlexLayoutModule,
+    SharedModule
   ],
-  schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
+  // schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
   providers: [MedicalAppointmentsService]
 
 })
