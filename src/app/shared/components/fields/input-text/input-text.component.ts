@@ -2,6 +2,7 @@ import {Component, Input, OnInit} from '@angular/core';
 import {AbstractControl, FormControl, FormGroup} from '@angular/forms';
 import {FieldValidatorService} from '../field-validator.service';
 import {SharedComponentValues} from '../../shared-component-values';
+import {ProjectValues} from '../../../constants/project-values';
 
 @Component({
   selector: 'app-input-text',
@@ -15,6 +16,7 @@ export class InputTextComponent {
   @Input() formGroup: FormGroup;
   @Input() controlName: string;
   sharedComponentValues;
+  projectValues = ProjectValues;
 
   constructor(public fieldValidator: FieldValidatorService) {
     this.sharedComponentValues = SharedComponentValues;

@@ -1,9 +1,9 @@
 .doctor-layout {
   display: grid;
-  /*width: 100vw;*/
-  height: 30vh;
+  width: 100vw;
+  height: 80vh;
   grid-template-columns: 2fr 8fr 2fr;
-  grid-template-rows: 1fr 10fr 1fr;
+  grid-template-rows: 2fr 8fr 2fr;
   grid-template-areas:
     ". . ."
     ". context ."
@@ -11,6 +11,31 @@
 }
 .context {
   grid-area: context;
+}
+
+.doctor-btn {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.doctor-input{
+  display: flex;
+  flex-direction: column;
+}
+
+.doctor-form {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.btn-doctor-form {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.mat-icon-button {
+  margin-left: 20px;
 }
 
 

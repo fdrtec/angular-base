@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {MedicalAppointmentsService} from '../../medical-appointments.service';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {ProjectValues} from '../../../../shared/constants/project-values';
 
 @Component({
   selector: 'app-doctor',
@@ -11,6 +12,7 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 export class DoctorComponent implements OnInit {
 
   doctorForm: FormGroup;
+  projectValues;
 
   constructor(private fb: FormBuilder,
               private medicalAppointmentsService: MedicalAppointmentsService) {
@@ -23,10 +25,18 @@ export class DoctorComponent implements OnInit {
       password:['', Validators.required],
       phoneNumber:['',Validators.required],
       specialization:['',Validators.required]
-    })
+    });
+    this.projectValues = ProjectValues;
   }
 
   onSubmit() {}
+
+  onReset() {
+
+  }
+  return() {
+
+  }
 }
 
 

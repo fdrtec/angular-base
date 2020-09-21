@@ -1,11 +1,51 @@
 <div class="doctor-layout">
-  <mat-card class="context">
-    <form class [formGroup]="doctorForm" (ngSubmit)="onSubmit()">
-      <app-input-text title="Nome"
+  <mat-card class="mat-body-2 context">
+    <mat-card-title>Cadastro de Médico</mat-card-title>
+    <form *ngIf="true" [formGroup]="doctorForm" (ngSubmit)="onSubmit()">
+
+      <app-input-text title="{{projectValues.title.doctor.InputTextName}}" class="doctor-input"
                       controlName="name"
                       [formGroup]="doctorForm"
-                      placeholder="Informe o nome">
+                      placeholder="{{projectValues.placeholder.doctor.inputTextName}}">
       </app-input-text>
+      <app-input-text title="{{projectValues.title.doctor.InputTextEmail}}" class="doctor-input"
+                      controlName="email"
+                      [formGroup]="doctorForm"
+                      placeholder="{{projectValues.placeholder.doctor.inputTextEmail}}">
+      </app-input-text>
+      <app-input-text title="{{projectValues.title.doctor.InputTextPassword}}" class="doctor-input"
+                      controlName="password"
+                      [formGroup]="doctorForm"
+                      placeholder="{{projectValues.placeholder.doctor.inputTextPassword}}">
+      </app-input-text>
+      <app-input-text title="{{projectValues.title.doctor.InputTextPhoneNumber}}" class="doctor-input"
+                      controlName="phoneNumber"
+                      [formGroup]="doctorForm"
+                      placeholder="{{projectValues.placeholder.doctor.inputTextPhoneNumber}}">
+      </app-input-text>
+
+      <app-input-text title="{{projectValues.title.doctor.InputTextSpecialization}}" class="doctor-input"
+                      controlName="specialization"
+                      [formGroup]="doctorForm"
+                      placeholder="{{projectValues.placeholder.doctor.inputTextSpecialization}}">
+      </app-input-text>
+
+      <div class="btn-doctor-form">
+        <button mat-icon-button type="submit" mat-button color="primary"
+                matTooltip="{{projectValues.tooltip.save}}" matTooltipPosition="above">
+          <mat-icon>save</mat-icon>
+        </button>
+
+        <button mat-icon-button type="reset" mat-button color="primary" (click)="onReset()"
+                matTooltip="{{projectValues.tooltip.reset}}" matTooltipPosition="above">
+          <mat-icon>clear</mat-icon>
+        </button>
+
+        <button mat-icon-button type="button" mat-button color="primary" (click)="return()"
+                matTooltip="{{projectValues.tooltip.return}}" matTooltipPosition="above">
+          <mat-icon>undo</mat-icon>
+        </button>
+      </div>
     </form>
   </mat-card>
 </div>
@@ -37,7 +77,7 @@
 <!--        </div>-->
 <!--      </div>-->
 
-<!--      <app-server-error-messages [server-error-messages]="serverErrorMessages"></app-server-error-messages>-->
+<!--      <app-server-error-doctors [server-error-doctors]="serverErrorMessages"></app-server-error-doctors>-->
 
 <!--      <button [disabled]="submittingForm || resourceForm.invalid" type="submit"-->
 <!--              class="btn btn-primary btn-lg float-right mt-3">-->
