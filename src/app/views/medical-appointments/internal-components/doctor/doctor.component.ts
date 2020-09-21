@@ -20,20 +20,29 @@ export class DoctorComponent implements OnInit {
 
   ngOnInit() {
     this.doctorForm = this.fb.group({
-      name:['', Validators.required],
-      email:['', Validators.required],
-      password:['', Validators.required],
-      phoneNumber:['',Validators.required],
-      specialization:['',Validators.required]
+      name: ['', Validators.required],
+      email: ['', Validators.required],
+      password: ['', Validators.required],
+      phoneNumber: ['', Validators.required],
+      specialization: ['', Validators.required]
     });
     this.projectValues = ProjectValues;
   }
 
-  onSubmit() {}
+  onSubmit() {
+    this.doctorForm.markAllAsTouched();
+    if (this.doctorForm.invalid) {
+      console.info(this.doctorForm.getRawValue())
+      alert("Olhe no log console - F12");
+      return;
+    }
+    // this._createMessage(this.messageForm.getRawValue(), this.contactItem);
+  }
 
   onReset() {
 
   }
+
   return() {
 
   }
