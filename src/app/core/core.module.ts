@@ -1,4 +1,4 @@
-import {CUSTOM_ELEMENTS_SCHEMA, NgModule} from '@angular/core';
+import {NgModule} from '@angular/core';
 import {ViewBaseComponent} from './components/view-base/view-base.component';
 import {CoreRoutingModule} from './core-routing.module';
 import {MaterialDesignModule} from '../material-design/material-design.module';
@@ -16,14 +16,12 @@ import {HttpClientModule} from '@angular/common/http';
     CoreRoutingModule,
     MaterialDesignModule,
     ViewsModule,
-    // RouterModule,
     HttpClientModule
   ],
 
   exports: [
     ViewBaseComponent,
-    MaterialDesignModule,
-    HttpClientModule
+    //HttpClientModule
   ],
 })
 export class CoreModule {

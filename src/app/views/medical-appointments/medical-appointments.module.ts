@@ -1,21 +1,22 @@
-import {CUSTOM_ELEMENTS_SCHEMA, NgModule} from '@angular/core';
+import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {MedicalAppointmentsRoutingModule} from './medical-appointments-routing.module';
-import {MedicalAppointmentsService} from './medical-appointments.service';
-import {DoctorComponent} from './internal-components/doctor/doctor.component';
-import {PatientComponent} from './internal-components/patient/patient.component';
+import {MedicalAppointmentsService} from './services/medical-appointments.service';
 import {MedicalAppointmentsComponent} from './medical-appointments.component';
 import {SharedModule} from '../../shared/shared.module';
+import {DoctorModule} from './internal-components/doctor/doctor.module';
 
 @NgModule({
-  declarations: [MedicalAppointmentsComponent, DoctorComponent, PatientComponent],
+  declarations: [
+    MedicalAppointmentsComponent
+  ],
   imports: [
     CommonModule,
     MedicalAppointmentsRoutingModule,
+    DoctorModule,
     SharedModule
   ],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA],
-  exports: [SharedModule],
+  exports: [],
   providers: [MedicalAppointmentsService]
 
 })

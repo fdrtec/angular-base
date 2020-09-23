@@ -12,8 +12,8 @@ import {MedicalAppointmentsModule} from './medical-appointments/medical-appointm
   declarations: [
     HomeComponent,
     FrameworkInfoComponent,
-    ExamplesComponent,
-    FormExampleComponentComponent,
+    //ExamplesComponent,
+    //FormExampleComponentComponent,
   ],
   imports: [
     CommonModule,

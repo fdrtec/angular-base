@@ -1,18 +1,17 @@
 import {Injectable} from '@angular/core';
-import {Doctor} from './models/doctor';
-import {DoctorResourceService} from './resources/doctor-resource.service';
-import {AppointmentResourceService} from './resources/appointment-resource.service';
-import {PatientResourceService} from './resources/patient-resource.service';
+import {Doctor} from '../models/doctor';
+import {DoctorResourceService} from '../resources/doctor-resource.service';
+import {AppointmentResourceService} from '../resources/appointment-resource.service';
+import {PatientResourceService} from '../resources/patient-resource.service';
 import {Observable} from 'rxjs';
-import {Patient} from './models/patient';
-import {Appointment} from './models/appointment';
+import {Patient} from '../models/patient';
+import {Appointment} from '../models/appointment';
 
 @Injectable({
   providedIn: 'root'
 })
 
 export class MedicalAppointmentsService {
-
   constructor(
     private doctorResourceService: DoctorResourceService,
     private patientResourceService: PatientResourceService,

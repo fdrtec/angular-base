@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {MedicalAppointmentsService} from './medical-appointments.service';
+import {MedicalAppointmentsService} from './services/medical-appointments.service';
 
 @Component({
   selector: 'app-medical-appointments',
