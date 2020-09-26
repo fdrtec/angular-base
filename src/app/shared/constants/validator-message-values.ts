@@ -1,4 +1,4 @@
-export const SharedComponentValues = {
+export const ValidatorMessageValues = {
   validator: {
     required: 'Campo obrigatório',
     minLength: 'valor mínimo de caracteres:',

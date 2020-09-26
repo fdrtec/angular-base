@@ -1,7 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {AbstractControl, FormControl, FormGroup} from '@angular/forms';
 import {FieldValidatorService} from '../field-validator.service';
-import {SharedComponentValues} from '../../shared-component-values';
+import {ValidatorMessageValues} from '../../../constants/validator-message-values';
 import {ProjectValues} from '../../../constants/project-values';
 
 @Component({
@@ -15,11 +15,11 @@ export class InputTextComponent {
   @Input() placeholder: string;
   @Input() formGroup: FormGroup;
   @Input() controlName: string;
-  sharedComponentValues;
+  validatorMessageValues;
   projectValues = ProjectValues;
 
   constructor(public fieldValidator: FieldValidatorService) {
-    this.sharedComponentValues = SharedComponentValues;
+    this.validatorMessageValues = ValidatorMessageValues;
   }
 
   get formControl(): AbstractControl {

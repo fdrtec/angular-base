@@ -6,13 +6,13 @@
            [name]="controlName"
            [formControlName]="controlName">
     <mat-error *ngIf="fieldValidator.hasErrorValidate(formControl,'required')">
-      {{sharedComponentValues.validator.required}}
+      {{validatorMessageValues.validator.required}}
     </mat-error>
     <mat-error *ngIf="fieldValidator.hasErrorValidate(formControl, 'minlength')">
-      {{sharedComponentValues.validator.minlength}} {{fieldValidator.lengthValidate(formControl, 'minlength')}}
+      {{validatorMessageValues.validator.minlength}} {{fieldValidator.lengthValidate(formControl, 'minlength')}}
     </mat-error>
     <mat-error *ngIf="fieldValidator.hasErrorValidate(formControl, 'maxlength')">
-      {{sharedComponentValues.validator.maxlength}} {{fieldValidator.lengthValidate(formControl, 'maxlength')}}
+      {{validatorMessageValues.validator.maxlength}} {{fieldValidator.lengthValidate(formControl, 'maxlength')}}
     </mat-error>
   </mat-form-field>
 </div>
