@@ -5,6 +5,7 @@ import {MedicalAppointmentsService} from './services/medical-appointments.servic
 import {MedicalAppointmentsComponent} from './medical-appointments.component';
 import {SharedModule} from '../../shared/shared.module';
 import {DoctorModule} from './internal-components/doctor/doctor.module';
+import {PatientModule} from './internal-components/patient/patient.module';
 
 @NgModule({
   declarations: [
@@ -14,9 +15,10 @@ import {DoctorModule} from './internal-components/doctor/doctor.module';
     CommonModule,
     MedicalAppointmentsRoutingModule,
     DoctorModule,
+    PatientModule,
     SharedModule
   ],
-  exports: [],
+  exports: [SharedModule],
   providers: [MedicalAppointmentsService]
 
 })

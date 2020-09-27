@@ -1,52 +1,57 @@
 <div class="doctor-layout">
-  <mat-card class="mat-body-2 context">
-    <mat-card-title>Cadastro de Médico</mat-card-title>
+  <mat-card class="mat-body-2 doctor-card-form">
+    <mat-card-header>
+      <mat-card-title>Médico</mat-card-title>
+      <mat-card-subtitle>Cadastro</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
     <form *ngIf="true" [formGroup]="doctorForm" (ngSubmit)="onSubmit()">
 
-      <app-input-text title="{{projectValues.title.doctor.InputTextName}}" class="doctor-input"
+      <fdr-input-text title="{{medicalAppointmentsValues.title.user.inputTextName}}" class="doctor-input"
                       controlName="name"
                       [formGroup]="doctorForm"
-                      placeholder="{{projectValues.placeholder.doctor.inputTextName}}">
-      </app-input-text>
-      <app-input-text title="{{projectValues.title.doctor.InputTextEmail}}" class="doctor-input"
+                      placeholder="{{medicalAppointmentsValues.placeholder.user.inputTextName}}">
+      </fdr-input-text>
+      <fdr-input-text title="{{medicalAppointmentsValues.title.user.inputTextEmail}}" class="doctor-input"
                       controlName="email"
                       [formGroup]="doctorForm"
-                      placeholder="{{projectValues.placeholder.doctor.inputTextEmail}}">
-      </app-input-text>
-      <app-input-text title="{{projectValues.title.doctor.InputTextPassword}}" class="doctor-input"
+                      placeholder="{{medicalAppointmentsValues.placeholder.user.inputTextEmail}}">
+      </fdr-input-text>
+      <fdr-input-text title="{{medicalAppointmentsValues.title.user.inputTextPassword}}" class="doctor-input"
                       controlName="password"
                       [formGroup]="doctorForm"
-                      placeholder="{{projectValues.placeholder.doctor.inputTextPassword}}">
-      </app-input-text>
-      <app-input-text title="{{projectValues.title.doctor.InputTextPhoneNumber}}" class="doctor-input"
+                      placeholder="{{medicalAppointmentsValues.placeholder.user.inputTextPassword}}">
+      </fdr-input-text>
+      <fdr-input-text title="{{medicalAppointmentsValues.title.user.inputTextPhoneNumber}}" class="doctor-input"
                       controlName="phoneNumber"
                       [formGroup]="doctorForm"
-                      placeholder="{{projectValues.placeholder.doctor.inputTextPhoneNumber}}">
-      </app-input-text>
+                      placeholder="{{medicalAppointmentsValues.placeholder.user.inputTextPhoneNumber}}">
+      </fdr-input-text>
 
-      <app-input-text title="{{projectValues.title.doctor.InputTextSpecialization}}" class="doctor-input"
+      <fdr-input-text title="{{medicalAppointmentsValues.title.user.doctor.inputTextSpecialization}}" class="doctor-input"
                       controlName="specialization"
                       [formGroup]="doctorForm"
-                      placeholder="{{projectValues.placeholder.doctor.inputTextSpecialization}}">
-      </app-input-text>
+                      placeholder="{{medicalAppointmentsValues.placeholder.user.doctor.inputTextSpecialization}}">
+      </fdr-input-text>
 
       <div class="btn-doctor-form">
         <button mat-icon-button type="submit" mat-button color="primary"
-                matTooltip="{{projectValues.tooltip.save}}" matTooltipPosition="above">
+                matTooltip="{{formArtefactsValues.tooltip.save}}" matTooltipPosition="above">
           <mat-icon>save</mat-icon>
         </button>
 
         <button mat-icon-button type="reset" mat-button color="primary" (click)="onReset()"
-                matTooltip="{{projectValues.tooltip.reset}}" matTooltipPosition="above">
+                matTooltip="{{formArtefactsValues.tooltip.reset}}" matTooltipPosition="above">
           <mat-icon>clear</mat-icon>
         </button>
 
         <button mat-icon-button type="button" mat-button color="primary" (click)="cancel()"
-                matTooltip="{{projectValues.tooltip.return}}" matTooltipPosition="above">
+                matTooltip="{{formArtefactsValues.tooltip.return}}" matTooltipPosition="above">
           <mat-icon>undo</mat-icon>
         </button>
       </div>
     </form>
+    </mat-card-content>
   </mat-card>
 </div>
 

@@ -1,0 +1,34 @@
+<section class="patient-form-layout">
+  <mat-card class="patient-card-form">
+    <mat-card-header>
+      <mat-card-title>Paciente</mat-card-title>
+      <mat-card-subtitle>Cadastro</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <form [formGroup]="patientForm" (ngSubmit)="onSubmit()">
+        <fdr-input-text title="{{medicalAppointmentsValues.title.user.inputTextName}}" class="doctor-input"
+                        controlName="name"
+                        [formGroup]="patientForm"
+                        placeholder="{{medicalAppointmentsValues.placeholder.user.inputTextName}}">
+        </fdr-input-text>
+        <div class="btn-form">
+          <button mat-icon-button type="submit" mat-button color="primary"
+                  matTooltip="{{formArtefactsValues.tooltip.save}}" matTooltipPosition="above">
+            <mat-icon>save</mat-icon>
+          </button>
+
+          <button mat-icon-button type="reset" mat-button color="primary" (click)="onReset()"
+                  matTooltip="{{formArtefactsValues.tooltip.reset}}" matTooltipPosition="above">
+            <mat-icon>clear</mat-icon>
+          </button>
+
+          <button mat-icon-button type="button" mat-button color="primary" (click)="cancel()"
+                  matTooltip="{{formArtefactsValues.tooltip.return}}" matTooltipPosition="above">
+            <mat-icon>undo</mat-icon>
+          </button>
+        </div>
+      </form>
+    </mat-card-content>
+
+  </mat-card>
+</section>

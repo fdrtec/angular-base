@@ -7,10 +7,11 @@ import {FieldsModule} from './components/fields/fields.module';
   declarations: [],
   imports: [
     CommonModule,
-    FieldsModule
+    FieldsModule,
   ],
   exports: [
-    FieldsModule
+    FieldsModule,
+    MaterialDesignModule
   ]
 })
 

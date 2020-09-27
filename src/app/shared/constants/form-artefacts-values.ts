@@ -1,4 +1,4 @@
-export const ProjectValues = {
+export const FormArtefactsValues = {
   toaster: {
     issue: {
       createSuccess: 'Chamado criado com sucesso.',
@@ -9,21 +9,12 @@ export const ProjectValues = {
       createFail: 'Não foi possível criar  a mensagem',
     }
   },
-  status: {
-    open: 'Aberto',
-    closed: 'Fechado',
-    finalized: 'Finalizado'
-  },
-  resources: {
-    issues: 'issues',
-    messages: 'messages',
-    senders: 'senders'
-  },
+
   tooltip: {
     save: 'salvar',
     reset: 'resetar',
     return: 'voltar',
-    viewMore: 'ver +'
+    cancel: 'cancelar'
   },
   placeholder: {
     doctor: {
@@ -32,9 +23,6 @@ export const ProjectValues = {
       inputTextPassword: 'Insira senha',
       inputTextPhoneNumber: 'Insira Telefone',
       InputTextSpecialization: 'Insira especialização',
-    },
-    message: {
-      inputTextArea: 'Ex. Não funcionou o procedimento, preciso de mais detalhes'
     }
   },
   title: {
@@ -44,7 +32,6 @@ export const ProjectValues = {
       InputTextPassword: 'Senha',
       InputTextPhoneNumber: 'Telefone',
       InputTextSpecialization: 'Especialização'
-
     }
   }
 };

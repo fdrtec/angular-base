@@ -1,0 +1,20 @@
+.patient-form-layout {
+  display: grid;
+  grid-template-columns: 4fr 4fr 4fr;
+  grid-template-rows: 2fr 8fr 2fr;
+  grid-template-areas:
+    ". . ."
+    ". card ."
+    ". . ."
+}
+
+.patient-card-form {
+  grid-area: card
+
+}
+
+.btn-form {
+  display: flex;
+  flex-direction: row-reverse;
+}
+

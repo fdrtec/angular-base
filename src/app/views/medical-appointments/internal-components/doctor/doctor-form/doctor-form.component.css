@@ -2,15 +2,15 @@
   display: grid;
   width: 100vw;
   height: 80vh;
-  grid-template-columns: 2fr 8fr 2fr;
+  grid-template-columns: 4fr 4fr 4fr;
   grid-template-rows: 2fr 8fr 2fr;
   grid-template-areas:
     ". . ."
-    ". context ."
+    ". card ."
     ". . ."
 }
-.context {
-  grid-area: context;
+.doctor-card-form {
+  grid-area: card;
 }
 
 .doctor-btn {
