@@ -4,8 +4,8 @@ import {DoctorListComponent} from './doctor-list/doctor-list.component';
 import {DoctorFormComponent} from './doctor-form/doctor-form.component';
 
 const routes: Routes = [
-  // {path: '', component: DoctorListComponent},
-  {path: '', component: DoctorFormComponent}
+  { path: '', component: DoctorListComponent},
+  { path: 'doctor-form', component: DoctorFormComponent}
 ];
 
 @NgModule({

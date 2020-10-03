@@ -2,7 +2,7 @@
   <mat-card class="mat-body-2 doctor-card-form">
     <mat-card-header>
       <mat-card-title>Médico</mat-card-title>
-      <mat-card-subtitle>Cadastro</mat-card-subtitle>
+      <mat-card-subtitle>Novo Cadastro</mat-card-subtitle>
     </mat-card-header>
     <mat-card-content>
     <form *ngIf="true" [formGroup]="doctorForm" (ngSubmit)="onSubmit()">
@@ -45,7 +45,7 @@
           <mat-icon>clear</mat-icon>
         </button>
 
-        <button mat-icon-button type="button" mat-button color="primary" (click)="cancel()"
+        <button mat-icon-button type="button" mat-button color="primary" routerLink="/doctor"
                 matTooltip="{{formArtefactsValues.tooltip.return}}" matTooltipPosition="above">
           <mat-icon>undo</mat-icon>
         </button>

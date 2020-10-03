@@ -1,0 +1,15 @@
+.doctor-list-layout {
+  display: grid;
+  width: 100vw;
+  height: 80vh;
+  grid-template-columns: .5fr 11fr .5fr;
+  grid-template-rows: .1fr auto;
+  grid-template-areas:
+    ". . ."
+    ". card ."
+    ". . ."
+}
+
+.doctor-list-card {
+  grid-area: card
+}

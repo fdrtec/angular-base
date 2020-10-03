@@ -1,1 +1,60 @@
-<p>doctor-list works!</p>
+<div class="doctor-list-layout">
+  <mat-card class="mat-body-2 doctor-list-card mat-elevation-z8">
+    <mat-card-header>
+      <mat-card-title>Médicos</mat-card-title>
+      <mat-card-subtitle>Profissionais Cadastrados</mat-card-subtitle>
+      <button mat-icon-button color="primary" aria-label="createDoctor" routerLink="/doctor/doctor-form"
+              matTooltip="Cadastrar Médico" matTooltipPosition="right">
+        <mat-icon>add_circle</mat-icon>
+
+      </button>
+    </mat-card-header>
+    <mat-card-content>
+
+      <mat-table [dataSource]="doctors">
+
+        <!-- Name Definition -->
+        <ng-container matColumnDef="name">
+          <mat-header-cell *matHeaderCellDef>Nome</mat-header-cell>
+          <mat-cell *matCellDef="let row"> {{row.name}} </mat-cell>
+        </ng-container>
+
+        <!-- Specialization Definition -->
+        <ng-container matColumnDef="specialization">
+          <mat-header-cell *matHeaderCellDef>Especialidade</mat-header-cell>
+          <mat-cell *matCellDef="let row"> {{row.specialization}} </mat-cell>
+        </ng-container>
+
+        <!-- Email Definition -->
+        <ng-container matColumnDef="email">
+          <mat-header-cell *matHeaderCellDef>Email</mat-header-cell>
+          <mat-cell *matCellDef="let row"> {{row.email}} </mat-cell>
+        </ng-container>
+
+        <!-- PhoneNumber Definition -->
+        <ng-container matColumnDef="phoneNumber">
+          <mat-header-cell *matHeaderCellDef>Telefone</mat-header-cell>
+          <mat-cell *matCellDef="let row"> {{row.phoneNumber}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="action">
+          <mat-header-cell *matHeaderCellDef>Ações</mat-header-cell>
+          <mat-cell *matCellDef="let row">
+            <button mat-icon-button color="primary" aria-label="updateDoctor" (click)="updateDoctor(row._id)"
+                    matTooltip="Editar Médico" matTooltipPosition="left">
+              <mat-icon>create</mat-icon>
+            </button>
+            <button mat-icon-button color="warn" aria-label="deleteDoctor" (click)="deleteDoctor(row._id)"
+                    matTooltip="Deletar Médico" matTooltipPosition="right">
+              <mat-icon>delete</mat-icon>
+            </button>
+          </mat-cell>
+        </ng-container>
+
+        <!-- Header and Row Declarations -->
+        <mat-header-row *matHeaderRowDef="['name', 'specialization', 'email','phoneNumber','action']"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: ['name', 'specialization', 'email', 'phoneNumber','action']"></mat-row>
+      </mat-table>
+    </mat-card-content>
+  </mat-card>
+</div>

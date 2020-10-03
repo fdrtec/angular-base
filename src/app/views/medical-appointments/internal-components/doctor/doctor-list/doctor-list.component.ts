@@ -14,7 +14,24 @@ export class DoctorListComponent implements OnInit {
   constructor(private doctorService: DoctorService) {}
 
   ngOnInit(): void {
-    let doctor = new Doctor("", "Marcelo", "marcelo@doctor.com", "abcd", "99999999", "otorrino");
-    this.doctors.push(doctor);
+    let doctor1 = new Doctor("123456", "Marcelo Medeiros", "marcelo@doctor.com", "abcd", "99999999", "Otorrino");
+    let doctor2 = new Doctor("589743", "João Silveira", "joao@doctor.com", "abcd", "888888", "Clínico Geral");
+    this.doctors.push(doctor1, doctor2);
   }
+
+  createDoctor() {
+
+
+  }
+
+  updateDoctor(_id: String) {
+    confirm("update id:"+_id);
+  }
+
+  deleteDoctor(_id: any) {
+    confirm("delete id:"+_id);
+
+  }
+
+
 }
