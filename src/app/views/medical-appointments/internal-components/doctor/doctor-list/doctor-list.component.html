@@ -10,9 +10,7 @@
       </button>
     </mat-card-header>
     <mat-card-content>
-
-      <mat-table [dataSource]="doctors">
-
+      <mat-table [dataSource]="doctors" class="mat-body-1 responsive-table">
         <!-- Name Definition -->
         <ng-container matColumnDef="name">
           <mat-header-cell *matHeaderCellDef>Nome</mat-header-cell>
@@ -54,6 +52,8 @@
         <!-- Header and Row Declarations -->
         <mat-header-row *matHeaderRowDef="['name', 'specialization', 'email','phoneNumber','action']"></mat-header-row>
         <mat-row *matRowDef="let row; columns: ['name', 'specialization', 'email', 'phoneNumber','action']"></mat-row>
+
+
       </mat-table>
     </mat-card-content>
   </mat-card>
