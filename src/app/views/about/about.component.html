@@ -1,0 +1,211 @@
+<style>
+    .bg {
+        background: rebeccapurple;
+        border: 1px solid white;
+    }
+</style>
+<div class="container-fluid">
+
+    <div class="row justify-content-center">
+        <div class="col bg">
+            <p class="display-4">typography</p>
+            <span class="text-muted">subtitulo</span>
+        </div>
+        <div class="col bg">b</div>
+        <div class="col bg">
+            <button class="btn btn-primary">teste</button>
+        </div>
+    </div>
+
+    <div class="column" justify-content-center>
+        <div class="col bg">a</div>
+        <div class="col bg">b</div>
+        <div class="col bg">
+            <button class="btn btn-primary">teste</button>
+        </div>
+    </div>
+
+</div>
+
+
+<!--<style>-->
+<!--    /*.about-main {*/-->
+<!--    /*    display: flex;*/-->
+<!--    /*    height: 100%;*/-->
+<!--    /*    background-color: #000;*/-->
+<!--    /*    justify-content: center;*/-->
+<!--    /*    align-content: center;*/-->
+<!--    /*}*/-->
+
+<!--    /*.layout {*/-->
+<!--    /*    display: flex;*/-->
+<!--    /*    width: 40vw;*/-->
+<!--    /*    flex-flow: row wrap;*/-->
+<!--    /*    justify-content: space-around;*/-->
+<!--    /*    align-content: space-around;*/-->
+<!--    /*justify-content: space-between;*/-->
+<!--    /*margin: 5em;*/-->
+<!--    /*align-content: center;*/-->
+<!--    /*align-items: flex-end;*/-->
+<!--    /*align-items: baseline;*/-->
+<!--    /*justify-content: space-between;*/-->
+
+<!--    /*usando flex-flow pode se usar os 2 valores*/-->
+<!--    /*flex-direction: row;*/-->
+<!--    /*flex-direction: column;*/-->
+
+<!--    /*wrap mantem dentro os flex-itens dentro do container*/-->
+<!--    /*flex-wrap: wrap-reverse;*/-->
+<!--    /*flex-wrap: no-wrap*/-->
+<!--    /*}*/-->
+
+<!--    .context {-->
+<!--        /*display: flex;*/-->
+<!--        /*background-color: #1976d2;*/-->
+<!--        /*border: .1em #fff solid;*/-->
+<!--        /*padding: 5em;*/-->
+<!--        /*flex: 0 1 5em;*/-->
+<!--        /*text-align: center;*/-->
+<!--        /*width: 10em;*/-->
+<!--        /*height: 10em;*/-->
+<!--    }-->
+
+<!--    /*.context:nth-child(2) {*/-->
+<!--    /*    background-color:red;*/-->
+<!--    /*    order: -1;*/-->
+<!--    /*    flex-grow: 6;*/-->
+
+<!--    /*}*/-->
+
+<!--    /*.context:nth-child(4) {*/-->
+<!--    /*    background-color:green;*/-->
+<!--    /*    !*order: 3;*!*/-->
+<!--    /*    !*flex-shrink: 1;*!*/-->
+<!--    /*}*/-->
+
+<!--    .container {-->
+<!--        display: flex;-->
+<!--        align-content: center;-->
+<!--        justify-content: center;-->
+<!--        flex-flow: column wrap;-->
+<!--        width: 100%;-->
+<!--        height: auto;-->
+<!--    }-->
+
+<!--    .about-title {-->
+<!--        display: flex;-->
+<!--        flex-direction: row-reverse;-->
+<!--    }-->
+
+<!--    .card-container {-->
+<!--        display: flex;-->
+<!--        flex-flow: row wrap;-->
+<!--        gap: 1em;-->
+<!--        /*justify-content: space-between;*/-->
+<!--        justify-content: space-evenly;-->
+<!--        align-content: space-between;-->
+<!--    }-->
+
+<!--    .item {-->
+<!--        width: 25em;-->
+<!--        text-align: justify;-->
+<!--    }-->
+
+<!--    .item:nth-child(1) {-->
+<!--        width:100%;-->
+<!--        background-color: aquamarine;-->
+<!--    }-->
+
+<!--</style>-->
+
+<!--<main class="container">-->
+<!--    <p class="mat-h3 about-title">Sobre o projeto</p>-->
+<!--    <div class="card-container">-->
+<!--        <mat-card class="item">-->
+<!--            <mat-card-header>-->
+<!--                <div mat-card-avatar class="avatar-header-image"></div>-->
+<!--                <mat-card-title>Primeira visão</mat-card-title>-->
+<!--                <mat-card-subtitle>Portfolio</mat-card-subtitle>-->
+<!--            </mat-card-header>-->
+<!--            <mat-card-content>-->
+<!--                <p> Este projeto foi baseado nas habilidades técnicas que o Desenvolvedor FullStack-->
+<!--                    <strong>Fabiano Dias Ramires</strong> adquiriu durante estudos e prática profissional-->
+<!--                    a partir de 2017.-->
+<!--                </p>-->
+<!--                <p>-->
+<!--                    O ponto forte do portfólio é o código fonte da infra estrutura montada para demonstração de-->
+<!--                    conhecimento. O portfólio se divide em:-->
+<!--                    FrontEnd com Angular(TypeScript): <a href="https://github.com/fdrtec/angular-base"-->
+<!--                                                         target="_blank">GitHub-->
+<!--                    FrontEnd.</a>-->
+<!--                    Backend com springBoot(Java):<a href="https://github.com/fdrtec/fdr-portfolio-api"-->
+<!--                                                    target="_blank">GitHub-->
+<!--                    BackEnd.</a>-->
+<!--                    Banco de dados NoSQL(MongoDB)-->
+<!--                </p>-->
+<!--            </mat-card-content>-->
+<!--        </mat-card>-->
+
+<!--        <mat-card class="item">-->
+<!--            <mat-card-header>-->
+<!--                <div mat-card-avatar class="avatar-header-image"></div>-->
+<!--                <mat-card-title>FrontEnd</mat-card-title>-->
+<!--                <mat-card-subtitle>Angular</mat-card-subtitle>-->
+<!--            </mat-card-header>-->
+<!--            <mat-card-content>-->
+<!--                <p> falar sobre responsividade e master detail do angular-->
+<!--                </p>-->
+<!--                <p>-->
+<!--                    FrontEnd com Angular(TypeScript): <a href="https://github.com/fdrtec/angular-base"-->
+<!--                                                         target="_blank">GitHub-->
+<!--                    FrontEnd.</a>-->
+<!--                </p>-->
+<!--            </mat-card-content>-->
+<!--        </mat-card>-->
+
+<!--        <mat-card class="item">-->
+<!--            <mat-card-header>-->
+<!--                <div mat-card-avatar class="avatar-header-image"></div>-->
+<!--                <mat-card-title>BackEnd</mat-card-title>-->
+<!--                <mat-card-subtitle>SpringBoot</mat-card-subtitle>-->
+<!--            </mat-card-header>-->
+<!--            <mat-card-content>-->
+<!--                <p> falar do spring com java</p>-->
+<!--                <p>Backend com springBoot(Java):<a href="https://github.com/fdrtec/fdr-portfolio-api"-->
+<!--                                                   target="_blank">GitHub-->
+<!--                    BackEnd.</a>-->
+<!--                </p>-->
+<!--            </mat-card-content>-->
+<!--        </mat-card>-->
+
+<!--        <mat-card class="item">-->
+<!--            <mat-card-header>-->
+<!--                <div mat-card-avatar class="avatar-header-image"></div>-->
+<!--                <mat-card-title>Data Base</mat-card-title>-->
+<!--                <mat-card-subtitle>Mongo DB</mat-card-subtitle>-->
+<!--            </mat-card-header>-->
+<!--            <mat-card-content>-->
+<!--                <p> falar Mongo db</p>-->
+<!--                <p>MongoDB:<a href="https://github.com/fdrtec/fdr-portfolio-api" target="_blank">GitHub BackEnd.</a>-->
+<!--                </p>-->
+<!--            </mat-card-content>-->
+<!--        </mat-card>-->
+<!--    </div>-->
+
+<!--</main>-->
+
+
+<!--&lt;!&ndash;<main class="about-main">&ndash;&gt;-->
+<!--&lt;!&ndash;    <section class="layout">&ndash;&gt;-->
+<!--&lt;!&ndash;        <div class="context">1</div>&ndash;&gt;-->
+<!--&lt;!&ndash;        <div class="context">2</div>&ndash;&gt;-->
+<!--&lt;!&ndash;        <div class="context">3</div>&ndash;&gt;-->
+<!--&lt;!&ndash;        <div class="context">4</div>&ndash;&gt;-->
+<!--&lt;!&ndash;        <div class="context">5</div>&ndash;&gt;-->
+<!--&lt;!&ndash;        <div class="context">6</div>&ndash;&gt;-->
+<!--&lt;!&ndash;        <div class="context">7</div>&ndash;&gt;-->
+<!--&lt;!&ndash;        <div class="context">8</div>&ndash;&gt;-->
+<!--&lt;!&ndash;        <div class="context">9</div>&ndash;&gt;-->
+<!--&lt;!&ndash;    </section>&ndash;&gt;-->
+<!--&lt;!&ndash;</main>&ndash;&gt;-->
+

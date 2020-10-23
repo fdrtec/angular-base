@@ -1,0 +1,112 @@
+<style>
+    .about-layout {
+        display: flex;
+        grid-gap: 1em 1em;
+        /*grid-template-columns: 1fr repeat(auto-fit, minmax(1em, 1fr));*/
+        color: #fff;
+        background: #000;
+        height: 100vh;
+        align-items: start;
+        justify-content: center;
+    }
+
+    .profile-image {
+        /*display:flex;*/
+        width: 30%;
+        border-radius: 1em;
+    }
+
+    .avatar-header-image {
+        background-image: url('../../../assets/logos/angular.png');
+        background-size: cover;
+    }
+
+
+    /*.about-layout {*/
+    /*    display: grid;*/
+    /*    place-items: center;*/
+    /*    grid-template-columns: 3fr 9fr;*/
+    /*    grid-template-rows: auto;*/
+    /*    grid-template-areas: "header main";*/
+    /*}*/
+
+    .about-header {
+        display: flex;
+        grid-gap: .5em;
+
+        /*grid-area: header;*/
+        color: #fff;
+        background-image: url('../../../assets/about/night-photograph-2183637_1280.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        /*background-size: 120% 100%;*/
+        width: 60vw;
+        height: 100vh;
+        /*align-items: center;*/
+        /*justify-content: start;*/
+    }
+
+    .about-main {
+        /*grid-area: main;*/
+    }
+
+    span.mat-h2{
+        margin: 0px;
+    }
+</style>
+
+
+<div class="about-layout">
+    <header class="about-header" fxLayout="column">
+        <p fxLayout="row" fxLayoutAlign="start" class="mat-h3">Autor</p>
+        <div fxLayout="column" fxLayoutAlign="center center">
+            <img class="profile-image" src="../../../assets/about/profile.jpg">
+            <span class="mat-h2">Fabiano Dias</span>
+            <span class="mat-h2">Ramires</span>
+        </div>
+    </header>
+    <main class="about-main">
+        <p fxLayout="row" fxLayoutAlign="end" class="mat-h3">Sobre o projeto</p>
+
+        <mat-card class="">
+                <mat-card-header>
+                    <div mat-card-avatar class="avatar-header-image"></div>
+                    <mat-card-title>Primeira visão</mat-card-title>
+                    <mat-card-subtitle>Portfolio</mat-card-subtitle>
+                </mat-card-header>
+                <mat-card-content>
+                    <p> Este projeto foi baseado nas habilidades técnicas que o Desenvolvedor FullStack
+                        <strong>Fabiano Dias Ramires</strong> adquiriu durante estudos e prática profissional
+                        a partir de 2017.
+                    </p>
+                    <p>
+                        O ponto forte do portfólio é o código fonte da infra estrutura montada para demonstração de
+                        conhecimento. O portfólio se divide em:
+                        FrontEnd com Angular(TypeScript): <a href="https://github.com/fdrtec/angular-base"
+                                                             target="_blank">GitHub
+                        FrontEnd.</a>
+                        Backend com springBoot(Java):<a href="https://github.com/fdrtec/fdr-portfolio-api"
+                                                        target="_blank">GitHub
+                        BackEnd.</a>
+                        Banco de dados NoSQL(MongoDB)
+                    </p>
+                </mat-card-content>
+            </mat-card>
+
+
+            <p>
+                O FrontEnd em Angular, foi estruturado com módulos para carregamento por demanda(lazyLoading = garantia
+                de performance),
+                módulos de rotas por contexto (componentes), Resource services abstratos , usando polimorfismo de
+                modelos
+                para reaproveitamento de código e escrito na nomeclatura REST para atingir qualquer api. Confecção de
+                Componentes customizados
+                e organização bibliotecas auxiliares a nível de compartilhamento (Shared). Construção respeitando o
+                padrão MVC.
+            </p>
+        <section>Informações 1</section>
+        <section>Informações 2</section>
+    </main>
+
+    <footer></footer>
+</div>
