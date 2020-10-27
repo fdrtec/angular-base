@@ -1,2 +1,27 @@
-<button mat-button color="primary" routerLink="/instagram-challenge">Desafio Html Instagram</button>
+<section class="bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+
+
+        <a class="navbar-brand" routerLink="/">Desafio Everis</a>
+        <button class="navbar-toggler navbar-toggler-right"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarEveris"
+                aria-control="navbarEveris"
+                aria-expanded="false"
+                aria-label="Navegação desafio Everis">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div id="navbarEveris" class="collapse navbar-collapse">
+            <ul class="navbar-nav navbar-sidenav">
+                <li class="nav-item">
+                    <a href="#" class="nav-link" routerLink="/instagram-challenge">
+                        <fa-icon [icon]="faCoffee"></fa-icon>
+                        <span class="ml-1">Instagram</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</section>
 <router-outlet></router-outlet>
