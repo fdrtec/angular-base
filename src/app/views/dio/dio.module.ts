@@ -4,19 +4,19 @@ import { BootcampEverisComponent } from './bootcamp-everis/bootcamp-everis.compo
 import { InstagramHtmlChallengeComponent } from './bootcamp-everis/instagram-html-challenge/instagram-html-challenge.component';
 import { DioRoutingModule } from './dio--routing.module';
 import { SharedModule } from '../../shared/shared.module';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { NetflixInterfaceChallengeComponent } from './bootcamp-everis/netflix-interface-challenge/netflix-interface-challenge.component';
 
 
 @NgModule({
     declarations: [
         BootcampEverisComponent,
         InstagramHtmlChallengeComponent,
+        NetflixInterfaceChallengeComponent
     ],
     imports: [
         CommonModule,
         DioRoutingModule,
-        SharedModule,
-        FontAwesomeModule
+        SharedModule
     ],
     exports: [
         SharedModule

@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'fdr-bootcamp-everis',
@@ -7,7 +6,7 @@ import { faCoffee } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./bootcamp-everis.component.css']
 })
 export class BootcampEverisComponent implements OnInit {
-  faCoffee = faCoffee;
+
 
   constructor() { }
 

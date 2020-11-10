@@ -4,7 +4,7 @@ import { MediaMatcher } from '@angular/cdk/layout';
 @Component({
     selector: 'app-view-base',
     templateUrl: './view-base.component.html',
-    styleUrls: [ './view-base.component.css' ]
+    styleUrls: [ './view-base.component.scss' ]
 })
 export class ViewBaseComponent implements OnInit, OnDestroy {
 
