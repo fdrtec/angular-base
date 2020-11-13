@@ -11,5 +11,4 @@ export class NetflixInterfaceChallengeComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
 }
