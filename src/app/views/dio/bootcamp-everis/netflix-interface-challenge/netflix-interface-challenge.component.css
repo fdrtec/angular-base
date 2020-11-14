@@ -1,18 +1,68 @@
 .body-netflix {
-    background:var(--black);
+    background: var(--black);
     color: #FFF;
 }
 
-header .container {
-    display: flex;
-    flex-direction: row;
-    align-items: baseline;
-    justify-content: space-between;
-    align-content: center;
+@media screen and (max-width: 700px) {
+    header .container {
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+    }
+
+    button {
+        display: flex;
+        flex-direction: column;
+        align-items:center
+    }
+
+    button {
+        display: flex;
+        flex-direction: row;
+        width: 90vw;
+        margin-bottom: 1em;
+        justify-content: center;
+        align-items:center
+    }
+
+    .main-movie .description {
+        margin-bottom: 2em;
+    }
+
+    .main-movie .title {
+        margin-top: 6em;
+        font-size: 2em;
+        font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
+    }
+
+}
+
+@media screen and (min-width: 701px) {
+    header .container {
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+        /*align-content: center;*/
+        justify-content: space-between;
+    }
+
+    .main-movie .description {
+        margin-bottom: 3em;
+    }
+
+    .main-movie .title {
+        margin-top: 6em;
+        font-size: 3em;
+        font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
+    }
+
+    .main-movie .container {
+        width: 40em;
+    }
 }
 
 header .logo {
-    margin-top:.5em;
+    margin-top: .5em;
     color: var(--red);
     font-weight: 800;
     font-size: 2em;
@@ -30,31 +80,23 @@ header nav a:hover {
 
 .main-movie {
     font-size: 1em;
-    background: linear-gradient(rgba(0,0,0,.50), rgba(0,0,0,.50) 100%), url("src/assets/dio/img-netflix/capa-house.jpg");
-    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, .50), rgba(0, 0, 0, .50) 100%), url("src/assets/dio/img-netflix/capa-house.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
     background-size: cover;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    height: 100vh;
 }
 
-.main-movie .description {
-    margin-bottom: 3em;
-}
 
-.main-movie .title {
-    margin-top: 6em;
-    font-size: 3em;
-    font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
-}
 
-.main-movie .container {
-    width: 40em;
-}
+
 
 .button {
-    background-color:rgba(0,0,0,.50);
+    background-color: rgba(0, 0, 0, .50);
     border: none;
     color: #FFF;
     padding: 1em 2em;
@@ -78,27 +120,21 @@ header nav a:hover {
 }
 
 .container {
-    margin-left: 2em;
+    margin-left: 1em;
 }
-
-/*.box-movie{*/
-/*    height: 100%;*/
-/*    width: 100%;*/
-/*    display: block;*/
-/*}*/
 
 .movie-carousel {
     display: flex;
     width: 30em;
     flex-direction: row;
 }
-.slide{
+
+.slide {
     display: flex;
 }
 
-.item {
 
-}
+
 
 
 

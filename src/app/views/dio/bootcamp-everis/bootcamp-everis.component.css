@@ -1,10 +1,22 @@
 .body-dio {
+    display: flex;
+    flex-direction:column;
     background-image: url('src/assets/dio/everis/everis.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    background-size: 70% 70%;
+    background-size: 50em 30em;
     background-position: center center;
-    width: 100vw;
     height: 100vh;
 
 }
+
+@media screen and (max-width:700px){
+    .body-dio {
+        background-size: 25em 20em;
+        /*background-position: start;*/
+        height: 40vh;
+    }
+
+}
+
+
