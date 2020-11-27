@@ -4,7 +4,29 @@
   background-size: cover;
   background-size: 120% 100%;
   background-position: center center;
-
   width: 100vw;
   height: 90vh;
+}
+
+.bg-top {
+  background-color: #68627a;
+}
+
+.btn-contact {
+  border: .05rem solid #fff;
+  background:none;
+  position:relative;
+  color: #fff;
+  z-index:1;
+  border-radius: 2rem;
+  /*height: 100%;*/
+}
+
+.btn-contact:hover {
+ color:#68627a;
+  background:#fff;
+  border-color: #fff;
+  transition: all .50s ease-in-out;
+  -moz-transition: all .50s ease-in-out;
+  -webkit-transition: all .50s ease-in-out;
 }

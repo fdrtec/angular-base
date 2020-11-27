@@ -1,1 +1,47 @@
-<div class="home-body img-fluid"></div>
+<!--<div class="home-body img-fluid"></div>-->
+<div class="container-fluid bg-top">
+  <header class="container">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <a href="#" class="navbar-brand">
+        <img src="../assets/images/home/spinner-150.png" height="30" class="d-inline-block align-top" alt="logo">
+        <small class="ml-2  mat-title ">FullStack DEV</small>
+      </a>
+      <button class="navbar-toggler" type="button" (click)="collapse.display='inline-block'"
+              data-toggle="collapse" data-target="menu"
+              aria-controls="menu" aria-expanded="false" aria-label="Menu colapse">
+        <span class="navbar-toggler-icon text-light"></span>
+      </button>
+      <div id="menu" class="collapse navbar-collapse" [collapse]="!isCollapsed" #collapse="bs-collapse">
+        <ul class="navbar-nav mr-auto text-light">
+          <li class="nav-item">
+            <a href="#" class="nav-link text-light mat-subheading">Serviços</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link text-light mat-subheading">Parceiros</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link text-light mat-subheading">Cursos</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link text-light  mat-subheading">Contato</a>
+          </li>
+        </ul>
+        <a href="#" class="mat-subheading btn col-md-3 btn-contact">Enviar Mensagem </a>
+      </div>
+    </nav>
+
+<!--    <button type="button" class="btn btn-success" (click)="collapse.display='inline-block'"-->
+<!--            aria-controls="collapseBasic">Inline-block-->
+<!--    </button>-->
+<!--    <button type="button" class="btn btn-primary" (click)="collapse.display='none'"-->
+<!--            aria-controls="collapseBasic">None-->
+<!--    </button>-->
+<!--    <hr>-->
+<!--    <div id="collapseBasic" [collapse]="!isCollapsed" #collapse="bs-collapse">-->
+<!--      <div class="well well-lg card card-block card-header">Some content</div>-->
+<!--    </div>-->
+
+
+  </header>
+</div>
+
